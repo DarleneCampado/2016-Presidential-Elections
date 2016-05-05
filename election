@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> <body>
 <h3 align="center">2016 Presidential Elections</h3><hr>
-<center>Who are you going to vote for president?<br><br></center>
+<canter>Who are you going to vote for president?<br><br></canter>
 Presidential Candidates:
 <p id="choices"></p>
 <input type="text" id="vote"><br>
@@ -15,13 +15,13 @@ var candidate_map = [];
         this.note = c_note;
     }
     candidate_map[0] = new candidate("Name", "Age", "Note");
-    candidate_map[1] = new candidate("Rodrigo Duterte", 70, "Leadership.");
+    candidate_map[1] = new candidate("Rodrigo Duterte", 70, "Leadership");
     candidate_map[2] = new candidate("Grace Poe", 50, "Congratulations, you have chosen a valid candidate.");
-    candidate_map[3] = new candidate("Miriam Santiago", 72, "Intelligence.");
+    candidate_map[3] = new candidate("Miriam Santiago", 72, "Intelligence");
     candidate_map[4] = new candidate("Mar Roxas", 65,"I am sorry but your candidate is blacklisted.");
-    candidate_map[5] = new candidate("Jejomar Binay", 75, "I am sorry but your candidate is BLACKlisted.");
+    candidate_map[5] = new candidate("Jejomar Binay", 75, "I am sorry but your candidate is blacklisted.");
 for(var j = 1; j<candidate_map.length;j++){
-    document.getElementById("choices").innerHTML += candidate_map[j].name + "<br>";}
+    document.getElementById("choices").innerHTML += j+" "+candidate_map[j].name + "<br>";}
 
 function vote(){
     var voted = document.getElementById("vote").value;
@@ -29,6 +29,9 @@ function vote(){
         if(candidate_map[a].name.split('').join('').toLowerCase().replace(/\s+/g, '') == voted.split('').join('').toLowerCase().replace(/\s+/g, '')){
             document.getElementById("note").innerHTML = candidate_map[a].note;
             alert(candidate_map[a].note);
+            break;
+        } else{
+            document.getElementById("note").innerHTML = "Not valid. Note: Please enter full name."
         }
      }
 }
