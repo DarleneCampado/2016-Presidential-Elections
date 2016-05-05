@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html> <body>
-<h3 align="center">2016 Presidential Elections</h3><hr>
-<canter>Who are you going to vote for president?<br><br></canter>
+<html> <body bgcolor="#FFE8F3">
+<h2 align="center"><font color="#C70039" face="verdana">2016 Presidential Elections</h2></font><hr>
+<font face="verdana">Who are you going to vote for president?<br><br>
 Presidential Candidates:
 <p id="choices"></p>
 <input type="text" id="vote"><br>
 <button onclick="vote()">Vote</button>
-<p id="note">Please vote wisely!</p>
+<p id="note">Please vote wisely!</p></font>
 <script>
 var candidate_map = [];
     function candidate(c_name, c_age, c_note){
@@ -31,8 +31,7 @@ function vote(){
             alert(candidate_map[a].note);
             break;
         } else{
-            document.getElementById("note").innerHTML = "Not valid. Note: Please enter full name."
-        }
+            document.getElementById("note").innerHTML = "Invalid input. Note: Please enter full name."}
      }
 }
 </script> </body> </html>
