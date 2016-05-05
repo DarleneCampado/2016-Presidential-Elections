@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html> <body bgcolor="#FFE8F3">
-<h2 align="center"><font color="#C70039" face="verdana">2016 Presidential Elections</h2></font><hr>
+<h2 align="center"><font color="#C70039" face="verdana">2016 <br>Presidential Elections</h2></font><hr>
 <font face="verdana">Who are you going to vote for president?<br><br>
 Presidential Candidates:
 <p id="choices"></p>
@@ -21,7 +21,7 @@ var candidate_map = [];
     candidate_map[4] = new candidate("Mar Roxas", 65,"I am sorry but your candidate is blacklisted.");
     candidate_map[5] = new candidate("Jejomar Binay", 75, "I am sorry but your candidate is blacklisted.");
 for(var j = 1; j<candidate_map.length;j++){
-    document.getElementById("choices").innerHTML += j+" "+candidate_map[j].name + "<br>";}
+    document.getElementById("choices").innerHTML += j+" "+candidate_map[j].name + ", "+candidate_map[j].age+"<br>";}
 
 function vote(){
     var voted = document.getElementById("vote").value;
